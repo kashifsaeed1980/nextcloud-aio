@@ -25,17 +25,17 @@ Run this command in terminal with `root` user.
     
     # paste this code
     
-    services:
-      app:
-        image: 'jc21/nginx-proxy-manager:latest'
-        restart: unless-stopped
-        ports:
-          - '80:80'
-          - '81:81'
-          - '443:443'
-        volumes:
-          - ./data:/data
-          - ./letsencrypt:/etc/letsencrypt
+        services:
+          app:
+            image: 'jc21/nginx-proxy-manager:latest'
+            restart: unless-stopped
+            ports:
+              - '80:80'
+              - '81:81'
+              - '443:443'
+            volumes:
+              - ./data:/data
+              - ./letsencrypt:/etc/letsencrypt
 
  - Save this file with Press `Ctrl + X` and Press `Y` and Press `Enter`
 Run Command `docker-compose up -d` and wait
@@ -83,6 +83,7 @@ Run Command:
 **Error: 3** `No SIP backend configured`
 “No SIP backend configured” means that the optional telephone dial-in and dial-out feature is not set up. The SIP bridge is a separate component and is not included by default in the All-in-One installation.
 Please note that this does not affect in-app communication. Users can still make voice and video calls within Nextcloud without any issues.
+
 
 
 
